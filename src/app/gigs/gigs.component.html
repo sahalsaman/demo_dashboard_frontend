@@ -1,0 +1,129 @@
+<div class="container">
+    <div class="d-flex">
+            <p class="fs-4 mt-5 me-5">Organisation Gigs <br>
+                <span style="color: gray;font-size: 15px;">Manage your organisation gigs here</span>
+            </p>
+            <!-- <button type="button" class="btn btn-primary ms-5 h-25 mt-5">Add data</button> -->
+    </div>
+
+<!-- opup modal - add data  -->
+
+  
+  
+
+    <!-- Menu box -->
+    <div>
+
+        <nav class="navbar navbar-expand-lg w-100 menu-bar">
+            <div class="container-fluid ">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <div class="collapse navbar-collapse menudropdown" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link navhover" aria-current="active" routerLinkActive="navActive"
+                                [routerLinkActiveOptions]="{exact: true}" routerLink="">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navhover" routerLinkActive="navActive" href="">Open</a>
+                        </li>
+                        <li>
+                            <a class="nav-link navhover" routerLinkActive="navActive" routerLink="">Completed</a>
+                        </li>
+                        <li>
+                            <a class="nav-link navhover" routerLinkActive="navActive" href="">Cancelled</a>
+                        </li>
+                    </ul>
+
+                    <!-- sort by -->
+                    <div class="dropdown me-4">
+                        <button class="btn dropdown-toggle btnSortby" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="true">
+                            <span style="margin-right: 60px;">Sort By</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- search -->
+                    <form class="d-flex searchBox" role="search">
+                        <input class="searchinput" type="search" placeholder="Search" aria-label="Search">
+                        <img class="searchIcon" src="./assets/search.png" alt="">
+                    </form>
+                    <a style="margin-left: 10px;margin-right:10px" href="#"><img style="width: 20px;"
+                            src="./assets/menu-yellow.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+
+
+    </div>
+    <!-- Status box -->
+    <div class="w-100 status-box mb-5">
+
+        <div class="completed" id="gigsCompleted">
+            <div class="row ">
+                <div *ngFor="let j of jobs" class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mt-2 mb-2 ">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <img class="cimg" src="./assets/gigname.png" alt="">
+                                <p class="card-text">Gig Name <br><span class="cspan">{{j.jobName}}</span></p>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <img class="cimg" src="./assets/gigCalender.png" alt="">
+                                <p class="card-text">Requierd Date <br><span class="cspan">{{j.date}}</span></p>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <img class="cimg" src="./assets/gigBudget.png" alt="">
+                                <p class="card-text">Total budget <br><span class="cspan">INR {{j.budjet}}</span></p>
+                            </div>
+                            <div class="cspan text-center mb-1">100% Secured</div>
+                            <div class="sprogress" style="width: 100%"></div>
+                            <div class="cspan text-center mb-1">Total Resources</div>
+                            <table class="text-center" style="width: 100%;color: rgb(49, 67, 116);">
+                                <tr>
+                                    <td>Requierd</td>
+                                    <td>Hired</td>
+                                    <td>Applicants</td>
+                                </tr>
+                                <tr>
+                                    <td>{{j.required}}</td>
+                                    <td>{{j.hired}}</td>
+                                    <td>{{j.applicants}}</td>
+                                </tr>
+                            </table>
+                            <div class="w-100 row" style="margin-left: 0px;">
+                                <div routerLink="" class="w-50 d-flex justify-content-center p-1 pt-2 deleteBtn">
+                                    <mat-icon style="font-size:20px ;">edit</mat-icon></div>
+                                <div  (click)="deleteJob(j.jobId)" class="w-50 d-flex justify-content-center p-1 pt-2 deleteBtn">
+                                    <mat-icon style="font-size:20px ;">delete</mat-icon></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+

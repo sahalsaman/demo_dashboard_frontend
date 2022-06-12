@@ -1,0 +1,120 @@
+
+
+<div class="d-flex justify-content-center mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3 appHighlight class="text-center">Add Job</h3>
+
+        </div>
+        <div class="card-body">
+            <form [formGroup]="addJob" (ngSubmit)="addjob()">
+
+                <div class="input-group form-group">
+                    <input type="text" name="jobId" formControlName="jobId" class="form-control" placeholder="job Id"
+                        id="login_uname" required>
+                </div>
+                <div *ngIf="this.addJob.get('jobId')?.touched  && this.addJob.get('jobId')?.errors" style="color: red;">
+                    invalid Job Id</div>
+
+                <div class="input-group form-group mt-2">
+                    <input type="text" name="jobName" formControlName="jobName" class="form-control" placeholder="job"
+                        id="login_uname" required>
+                </div>
+                <div *ngIf="this.addJob.get('jobName')?.touched  && this.addJob.get('jobName')?.errors"
+                    style="color: red;">
+                    invalid Job name</div>
+
+                <div class="input-group form-group mt-2">
+                    <input type="date" name="date" formControlName="date" class="form-control" placeholder="date"
+                        id="login_uname" required>
+                </div>
+                <div *ngIf="this.addJob.get('date')?.touched  && this.addJob.get('date')?.errors" style="color: red;">
+                    invalid date</div>
+
+                <div class="input-group form-group mt-2">
+                    <input type="text" name="budget" formControlName="budget" class="form-control" placeholder="budget"
+                        id="login_uname" required>
+                </div>
+                <div *ngIf="this.addJob.get('budget')?.touched  && this.addJob.get('budget')?.errors"
+                    style="color: red;">invalid budget</div>
+
+
+                <div class="input-group form-group mt-2">
+                    <input type="text" name="required" formControlName="required" class="form-control"
+                        placeholder="required" id="login_uname" required>
+                </div>
+                <div *ngIf="this.addJob.get('required')?.touched  && this.addJob.get('required')?.errors"
+                    style="color: red;">
+                    invalid no.of Vaccancy</div>
+
+                <div class="input-group form-group mt-2">
+                    <input type="text" name="hired" formControlName="hired" class="form-control" placeholder="hired"
+                        id="login_uname" required>
+                </div>
+                <div *ngIf="this.addJob.get('hired')?.touched  && this.addJob.get('hired')?.errors"
+                    style="color: red;">invalid no.of hired</div>
+
+                <div class="input-group form-group mt-2">
+                    <input type="text" name="applicants" formControlName="applicants" class="form-control"
+                        placeholder="applicantst" id="login_uname" required>
+                </div>
+                <div *ngIf="this.addJob.get('applicants')?.touched  && this.addJob.get('applicants')?.errors"
+                    style="color: red;">invalid applicants</div>
+
+                <div class="form-group mt-2">
+                    <input type="submit" value="addJob" class="btn float-right login_btn btn-primary "
+                        style="width:50%">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="card ms-5">
+        <div class="card-header">
+            <h3 appHighlight class="text-center">update Hiring Details</h3>
+
+        </div>
+        <div class="card-body">
+            <form [formGroup]="hiringForm" (ngSubmit)="updateHiring()">
+
+                <div class="input-group form-group">
+                    <input type="text" name="ujobId" formControlName="ujobId" class="form-control" placeholder="job Id"
+                        id="login_uname" required>
+                </div>
+                <div *ngIf="this.hiringForm.get('ujobId')?.touched  && this.hiringForm.get('ujobId')?.errors"
+                    style="color: red;">
+                    invalid Job Id</div>
+
+                <div class="input-group form-group mt-2">
+                    <input type="text" name="urequired" formControlName="urequired" class="form-control"
+                        placeholder="required" id="login_uname" required>
+                </div>
+                <div *ngIf="this.hiringForm.get('urequired')?.touched  && this.hiringForm.get('urequired')?.errors"
+                    style="color: red;">
+                    invalid no.of Vaccancy</div>
+
+                <div class="input-group form-group mt-2">
+                    <input type="text" name="uhired" formControlName="uhired" class="form-control" placeholder="hired"
+                        id="login_uname" required>
+                </div>
+                <div *ngIf="this.hiringForm.get('uhired')?.touched  && this.hiringForm.get('uhired')?.errors"
+                    style="color: red;">invalid no.of hired</div>
+
+                <div class="input-group form-group mt-2">
+                    <input type="text" name="uapplicants" formControlName="uapplicants" class="form-control"
+                        placeholder="applicantst" id="login_uname" required>
+                </div>
+                <div *ngIf="this.hiringForm.get('uapplicants')?.touched  && this.hiringForm.get('uapplicants')?.errors"
+                    style="color: red;">invalid applicants</div>
+
+
+                <div class="form-group mt-2">
+                    <input type="submit" value="Update Job hiri\trainingng" class="btn float-right login_btn btn-primary "
+                        style="width:80%">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

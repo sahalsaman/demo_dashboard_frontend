@@ -1,0 +1,35 @@
+<mat-nav-list>
+    <div class="logo">
+        <img class="logo-img" src="./assets/logo.png" alt="Company Logo" />
+    </div>
+    <mat-divider class="mb-3"></mat-divider>
+
+    <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/home">
+      <mat-icon>home</mat-icon> Home
+    </a> -->
+    <div class="side-Icon ">
+        <a class="d-flex justify-content-center" mat-list-item routerLinkActive="list-item-active" [routerLinkActiveOptions]="{exact: true}"  routerLink="/dashboard">
+            <img class="icon-img" src="./assets/dashboard.png" alt="dash-board" />
+        </a>
+    </div>
+    <div class="side-Icon ">
+        <a class="d-flex justify-content-center" mat-list-item routerLinkActive="list-item-active"  routerLink="/gigs">
+            <img class="icon-img" src="./assets/gigs.png" alt="gigs" />
+        </a>
+    </div>
+    <div class="side-Icon ">
+        <a class="d-flex justify-content-center" mat-list-item routerLinkActive="list-item-active" routerLink="/training">
+            <img class="icon-img" src="./assets/training.png" alt="training" />
+        </a>
+    </div>
+    <div class="side-Icon ">
+        <a class="d-flex justify-content-center" mat-list-item routerLinkActive="list-item-active" routerLink="/training">
+            <img class="icon-img" src="./assets/clock.png" alt="clock" />
+        </a>
+    </div>
+    <div class="side-Icon ">
+        <a class="d-flex justify-content-center" mat-list-item routerLinkActive="list-item-active" routerLink="/training">
+            <img class="icon-img" src="./assets/user.png" alt="user" />
+        </a>
+    </div>
+</mat-nav-list>

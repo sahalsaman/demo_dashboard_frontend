@@ -1,0 +1,44 @@
+.logo {
+  text-align: center;
+  padding: 11px;
+}
+
+.logo-img {
+  width: 30px;
+}
+
+.mat-divider {
+  border-top-width: 2px;
+  border-color: rgb(241, 241, 241);
+}
+
+.mat-list-item {
+  color: #94a3b8 !important;
+  font-size: 0.8rem;
+  height: 44px !important;
+  margin-bottom: 4px;
+}
+
+.mat-list-item-content {
+  border-radius: 5px;
+  margin: 0.8px;
+
+}
+
+.mat-subheader {
+  color: #818cf8;
+  font-size: 0.6rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.icon-img {
+  width: 15px;
+}
+.side-Icon:hover{
+  background-color: #c0c0c0;
+}
+.list-item-active{
+  background-color: #c0c0c0;
+  border-right: 4px solid gray;
+}
